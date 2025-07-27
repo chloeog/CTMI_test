@@ -112,7 +112,9 @@
     { A: 'M', B: 'N' }, // 2: 우유
     { A: 'S', B: 'U' }  // 3: 당도
   ];
-  return codeArray.map((ans, idx) => map[idx][ans]).join('');
+
+  const converted = codeArray.map((ans, idx) => map[idx][ans]); 
+  return `${converted[1]}${converted[0]}${converted[2]}${converted[3]}`;
 }
   
     if (q === 0) localStorage.removeItem('ctmiAnswers');
