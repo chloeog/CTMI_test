@@ -107,14 +107,14 @@
   
     // 변환 함수 추가
     function mapToCTMI(codeArray) {
-      const map = [
-        { A: 'H', B: 'I' },
-        { A: 'E', B: 'B' },
-        { A: 'M', B: 'N' },
-        { A: 'S', B: 'U' }
-      ];
-      return codeArray.map((ans, idx) => map[idx][ans]).join('');
-    }
+  const map = [
+    { A: 'E', B: 'B' }, // 0: 커피 종류
+    { A: 'H', B: 'I' }, // 1: 온도
+    { A: 'M', B: 'N' }, // 2: 우유
+    { A: 'S', B: 'U' }  // 3: 당도
+  ];
+  return codeArray.map((ans, idx) => map[idx][ans]).join('');
+}
   
     if (q === 0) localStorage.removeItem('ctmiAnswers');
   </script>
