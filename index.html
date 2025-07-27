@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>CTMI 성격유형 테스트</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(145deg, #f7f0e8, #e2d6c1);
+      font-family: 'Pretendard', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 400px;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 16px;
+      color: #4b2e2e;
+    }
+    p {
+      font-size: 16px;
+      color: #6b4e3e;
+      margin-bottom: 30px;
+    }
+    button {
+      background-color: #d6b48c;
+      border: none;
+      color: white;
+      font-size: 16px;
+      padding: 12px 24px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #cfa06f;
+    }
+    .subtext {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #9c7c5a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>나만의 커피 친구는?</h1>
+    <p>커피로 알아보는 귀여운 심리테스트 💡<br>
+    네 가지 질문을 통해 당신과 어울리는 커피 캐릭터를 만나보세요!</p>
+    <button onclick="startTest()">테스트 시작하기</button>
+    <div class="subtext">소요 시간 약 1분 ⏱</div>
+  </div>
+
+  <script>
+    function startTest() {
+      window.location.href = 'question.html?q=0';
+    }
+  </script>
+</body>
+</html>

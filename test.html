@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffee-TMI Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>나의 커피 취향을 알려줄게, Coffee-TMI</h1>
+    <p>아래 질문에 답하면 나만의 커피 코드를 확인해보세요!</p>
+  </header>
+
+  <main>
+    <div id="quiz">
+      <p id="question"></p>
+      <div id="options"></div>
+    </div>
+
+    <div id="result" class="hidden">
+      <h2>당신의 Coffee-TMI 코드</h2>
+      <div id="code"></div>
+      <button onclick="location.href='index.html'">결과 보러가기</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

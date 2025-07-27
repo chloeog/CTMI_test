@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>질문 페이지</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #f8f5f0;
+      font-family: 'Pretendard', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-bottom: 24px;
+      color: #4b2e2e;
+    }
+    .option {
+      display: block;
+      margin: 10px auto;
+      background-color: #d6b48c;
+      color: white;
+      padding: 12px 20px;
+      font-size: 15px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .option:hover {
+      background-color: #c5976d;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 id="question-title">질문</h2>
+    <button class="option" onclick="answer('A')" id="btnA"></button>
+    <button class="option" onclick="answer('B')" id="btnB"></button>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        title: '1. 당신의 커피 온도는?',
+        A: '자고로 커피는 뜨겁게 마셔야 그 향을 느끼지.',
+        B: '한국인은 아이스, 겨울이라도 아이스!'
+      },
+      {
+        title: '2. 당신의 취향인 커피 추출 방식은?',
+        A: 'SHOTSHOTSHOT. 진하고 깔끔한 에스프레소 샷!',
+        B: 'BREW야말로 커피 추출의 정수! 콜드브루, 드립커피의 풍미가 좋아!'
+      },
+      {
+        title: '3. 당신의 베이스 타입은?',
+        A: '우유가 들어간 부드러운 커피!',
+        B: '우유가 안들어간게 좋아! 차라리 두유, 오트!'
+      },
+      {
+        title: '4. 당신의 당도 취향은?',
+        A: '달달하게 입안을 감도는 맛이 좋아!',
+        B: '커피는 자고로 본연의 향과 풍미의 맛이지'
+      }
+    ];
+  
+    const params = new URLSearchParams(window.location.search);
+    const q = parseInt(params.get('q')) || 0;
+    let answers = JSON.parse(localStorage.getItem('ctmiAnswers') || '[]');
+  
+    const current = questions[q];
+    if (current) {
+      document.getElementById('question-title').textContent = current.title;
+      document.getElementById('btnA').textContent = current.A;
+      document.getElementById('btnB').textContent = current.B;
+    } else {
+      const result = mapToCTMI(answers); // 변환해서
+      localStorage.removeItem('ctmiAnswers');
+      window.location.href = `result.html?type=${result}`;
+    }
+  
+    function answer(choice) {
+  answers.push(choice);
+  localStorage.setItem('ctmiAnswers', JSON.stringify(answers));
+  
+  if (q + 1 < questions.length) {
+    window.location.href = `question.html?q=${q + 1}`;
+  } else {
+    const result = mapToCTMI(answers);
+    localStorage.removeItem('ctmiAnswers');
+    window.location.href = `result.html?type=${result}`;
+  }
+}
+  
+    // 변환 함수 추가
+    function mapToCTMI(codeArray) {
+      const map = [
+        { A: 'H', B: 'I' },
+        { A: 'E', B: 'B' },
+        { A: 'M', B: 'N' },
+        { A: 'S', B: 'U' }
+      ];
+      return codeArray.map((ans, idx) => map[idx][ans]).join('');
+    }
+  
+    if (q === 0) localStorage.removeItem('ctmiAnswers');
+  </script>
+</body>
+</html>

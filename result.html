@@ -1,0 +1,109 @@
+<!-- result.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>CTMI 결과</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: #f7f4ef;
+      font-family: 'Pretendard', sans-serif;
+      margin: 0;
+      padding: 40px 16px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      padding: 32px;
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .animal-box {
+      width: 150px;
+      height: 150px;
+      background-color: #f0e6d8;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .animal-box img {
+      width: 100%;
+      object-fit: contain;
+    }
+
+    .text-box {
+      flex: 1;
+    }
+
+    .keywords {
+      font-size: 14px;
+      font-weight: 600;
+      color: #715748;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .text-box h2 {
+      font-size: 20px;
+      color: #3b2e2e;
+      margin-bottom: 8px;
+    }
+
+    .text-box h3 {
+      font-size: 16px;
+      color: #7b5c48;
+      margin-bottom: 12px;
+    }
+
+    .text-box p {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+
+    .restart {
+      margin-top: 24px;
+      text-align: center;
+    }
+
+    .restart button {
+      background-color: #d6b48c;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="animal-box">
+      <img id="character-image" src="" alt="캐릭터 이미지" />
+    </div>
+    <div class="text-box">
+      <div class="keywords" id="character-type">B I M U</div>
+      <h2 id="character-name">이름</h2>
+      <h3 id="character-title">타이틀</h3>
+      <p id="character-description">설명</p>
+    </div>
+  </div>
+  <div class="restart">
+    <button onclick="restart()">다시 하기</button>
+  </div>
+
+  <script type="module" src="./result.js"></script>
+</body>
+</html>
