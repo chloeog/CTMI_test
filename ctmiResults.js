@@ -1,5 +1,5 @@
 // ctmiResults.js
-export const ctmiResults = {
+window.ctmiResults = {
     "EHMS": {
       name: "에스프레핑",
       title: "부드러운 라떼 속에도 강한 바디감!",
