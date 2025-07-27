@@ -54,7 +54,6 @@
   </div>
 
   <script>
-    // 질문 순서를 "종류 → 온도 → 우유 → 당도"로 변경
     const questions = [
       {
         title: '1. 당신의 취향인 커피 추출 방식은?',
@@ -77,11 +76,11 @@
         B: '커피는 자고로 본연의 향과 풍미의 맛이지'
       }
     ];
-
+  
     const params = new URLSearchParams(window.location.search);
     const q = parseInt(params.get('q')) || 0;
     let answers = JSON.parse(localStorage.getItem('ctmiAnswers') || '[]');
-
+  
     const current = questions[q];
     if (current) {
       document.getElementById('question-title').textContent = current.title;
@@ -92,10 +91,11 @@
       localStorage.removeItem('ctmiAnswers');
       window.location.href = `result.html?type=${result}`;
     }
-
+  
     function answer(choice) {
       answers.push(choice);
       localStorage.setItem('ctmiAnswers', JSON.stringify(answers));
+  
       if (q + 1 < questions.length) {
         window.location.href = `question.html?q=${q + 1}`;
       } else {
@@ -104,16 +104,17 @@
         window.location.href = `result.html?type=${result}`;
       }
     }
-
+  
     function mapToCTMI(codeArray) {
       const map = [
-        { A: 'E', B: 'B' }, // 종류
-        { A: 'H', B: 'I' }, // 온도
-        { A: 'M', B: 'N' }, // 우유
-        { A: 'S', B: 'U' }  // 당도
+        { A: 'E', B: 'B' }, // 0: 종류
+        { A: 'H', B: 'I' }, // 1: 온도
+        { A: 'M', B: 'N' }, // 2: 우유
+        { A: 'S', B: 'U' }  // 3: 당도
       ];
-
-      return codeArray.map((ans, idx) => map[idx][ans]).join('');
+  
+      const converted = codeArray.map((ans, idx) => map[idx][ans]);
+      return converted.join('');
     }
 
     if (q === 0) localStorage.removeItem('ctmiAnswers');
