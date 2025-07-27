@@ -1,5 +1,3 @@
-// result.js
-import { ctmiResults } from './ctmiResults.js';
 
 const params = new URLSearchParams(window.location.search);
 const type = params.get('type')?.toUpperCase();
