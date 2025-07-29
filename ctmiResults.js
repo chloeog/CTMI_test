@@ -2,7 +2,7 @@ export const ctmiResults = {
   "EHMS": {
     name: "돌체라떼같은 당신",
     title: "부드러운 라떼 속에도 강한 바디감!",
-    description: "따뜻함과 진심을 중요시하는 당신은, 언제나 주변에 안정감을 주는 존재예요. 우유처럼 포근한 품으로 모두를 감싸안는 리더십!",
+    description: "따뜻함과 진심을 중요시하는 당신은, 언제나 주변에 안정감을 주는 존재예요. <br> 우유처럼 포근한 품으로 모두를 감싸안는 리더십!",
     image: './images/EHMS.png',
     traits: ['Espresso', 'Hot', 'Milky', 'Sweety']
   },
