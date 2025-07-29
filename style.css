@@ -30,7 +30,24 @@ body {
   text-align: center;
   position: relative;
 }
+.type-box {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto 16px;
+  padding: 16px;
+  background-color: #fff0e1;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
 
+.type-large {
+  font-size: 1.8rem;
+  letter-spacing: 8px;
+  color: #4b2e2e;
+  font-weight: 700;
+  margin: 0;
+}
 /* 카드 내부 이미지 + trait 나열 부분 */
 .card-inner {
   display: flex;
@@ -129,7 +146,10 @@ button {
   .card-inner {
     flex-direction: column;
   }
-
+ .type-large {
+    font-size: 2.2rem;
+    letter-spacing: 10px;
+  }
   .name,
   .identity-text {
     font-size: 1.2rem;
