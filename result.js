@@ -34,3 +34,14 @@ if (traitList && traits.length > 0) {
     traitList.appendChild(li);
   });
 }
+
+window.downloadCardImage = function () {
+  const card = document.querySelector('.result-card');
+
+  html2canvas(card).then(canvas => {
+    const link = document.createElement('a');
+    link.download = 'CTMI_result.png';
+    link.href = canvas.toDataURL();
+    link.click();
+  });
+};
