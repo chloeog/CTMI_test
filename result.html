@@ -9,7 +9,8 @@
 </head>
 <body>
   <div class="result-page">
-    <div class="result-card">
+    <!-- 캡처할 대상 -->
+    <div class="result-card" id="capture-target">
       <div class="card-inner">
         <h2 id="character-type" class="type"></h2>
         <div class="left">
@@ -25,14 +26,32 @@
       <h2 class="identity-text" id="character-name"></h2>
       <h3 class="title" id="character-title"></h3>
       <p class="description" id="character-description"></p>
+    </div>
 
-      <div class="buttons">
-        <button onclick="location.href='index.html'">처음으로</button>
-        <button onclick="downloadCardImage()">이미지로 저장</button>
-      </div>
+    <!-- 캡처 대상 외부 버튼 -->
+    <div class="buttons">
+      <button onclick="location.href='index.html'">처음으로</button>
+      <button id="download-btn">이미지로 저장</button>
     </div>
   </div>
 
+  <!-- 결과 로직 -->
   <script type="module" src="result.js"></script>
+
+  <!-- 이미지 저장 로직 -->
+  <script>
+    document.getElementById("download-btn").addEventListener("click", () => {
+      const target = document.getElementById("capture-target");
+      html2canvas(target, {
+        backgroundColor: null, // 배경 투명
+        useCORS: true
+      }).then(canvas => {
+        const link = document.createElement("a");
+        link.download = "CTMI_result.png";
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+      });
+    });
+  </script>
 </body>
 </html>
