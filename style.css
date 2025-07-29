@@ -21,7 +21,7 @@ body {
 
 /* 카드 스타일 */
 .result-card {
-  background-color: #ffffff;
+  background-color: #fff8f2; /* 카드 배경을 body와 동일하게 */
   padding: 24px 20px;
   border-radius: 20px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
@@ -45,6 +45,8 @@ body {
   width: 140px;
   height: auto;
   display: block;
+  background-color: #fff8f2; /* 카드/배경과 통일 */
+  border-radius: 12px;       /* 이미지 모서리 부드럽게 */
   animation: float 3s ease-in-out infinite;
 }
 
@@ -143,6 +145,7 @@ button {
 
   .result-image {
     width: 120px;
+    border-radius: 10px;
   }
 
   .trait-list {
