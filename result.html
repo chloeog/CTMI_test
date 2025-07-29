@@ -5,18 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CTMI 결과</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
   <div class="result-page">
-    <div class="result-card">
+    
+    <!-- 🎯 캡처할 영역만 이 div로 묶기 -->
+    <div class="result-card" id="capture-target">
+      <div class="type-box">
+        <h2 id="character-type" class="type-large"></h2>
+      </div>
+
       <div class="card-inner">
-        <h2 id="character-type" class="type"></h2>
         <div class="left">
           <img id="character-image" class="result-image" alt="CTMI 캐릭터 이미지" />
         </div>
         <div class="right">
           <ul class="trait-list" id="trait-list">
-            <!-- JS에서 Brew / Iced / Milky / Sweety 삽입 -->
+            <!-- JS에서 trait 삽입 -->
           </ul>
         </div>
       </div>
@@ -24,13 +30,30 @@
       <h2 class="identity-text" id="character-name"></h2>
       <h3 class="title" id="character-title"></h3>
       <p class="description" id="character-description"></p>
+    </div>
 
-      <div class="buttons">
-        <button onclick="location.href='index.html'">처음으로</button>
-      </div>
+    <!-- 버튼은 캡처 대상 외부에 배치 -->
+    <div class="buttons" id="button-area">
+      <button onclick="location.href='index.html'">처음으로</button>
+      <button id="download-btn">이미지로 저장</button>
     </div>
   </div>
 
   <script type="module" src="result.js"></script>
+
+  <script>
+    document.getElementById("download-btn").addEventListener("click", () => {
+      const target = document.getElementById("capture-target");
+      html2canvas(target, {
+        backgroundColor: "#fff8f2",
+        useCORS: true
+      }).then(canvas => {
+        const link = document.createElement("a");
+        link.download = "CTMI_result.png";
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+      });
+    });
+  </script>
 </body>
 </html>

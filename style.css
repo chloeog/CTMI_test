@@ -1,27 +1,31 @@
+/* 웹폰트: 손글씨 스타일 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Gowun+Dodum&display=swap');
+
 /* 기본 설정 */
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+  font-family: 'Gowun Dodum', 'Noto Sans KR', sans-serif;
   background-color: #fff8f2;
 }
 
 /* 결과 페이지 전체 */
 .result-page {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;      
-  width: 100%;            
+  min-height: 100vh;
+  width: 100%;
   padding: 20px;
   background: #fff8f2;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 /* 카드 스타일 */
 .result-card {
-  background-color: #ffffff;
+  background-color: #fff8f2;
   padding: 24px 20px;
   border-radius: 20px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
@@ -31,7 +35,27 @@ body {
   position: relative;
 }
 
-/* 카드 내부 이미지 + trait 나열 부분 */
+/* B H M S 큰 글씨 박스 */
+.type-box {
+  width: 100%;
+  background-color: #fff0e1;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.type-large {
+  font-family: 'Nanum Brush Script', cursive;
+  font-size: 2.5rem;
+  letter-spacing: 12px;
+  color: #4b2e2e;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* 카드 내부 이미지 + trait */
 .card-inner {
   display: flex;
   justify-content: center;
@@ -45,16 +69,18 @@ body {
   width: 140px;
   height: auto;
   display: block;
+  background-color: #fff8f2;
+  border-radius: 12px;
   animation: float 3s ease-in-out infinite;
 }
 
-/* 속성 trait list */
+/* trait list */
 .trait-list {
   list-style: none;
   padding: 0;
   margin: 0;
   text-align: left;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #4b3f2f;
 }
 
@@ -63,35 +89,22 @@ body {
 }
 
 /* 텍스트 요소들 */
-.type {
-  font-size: 0.85rem;
-  letter-spacing: 3px;
-  font-weight: 600;
-  color: #4b2e2e;
-  background-color: #f5ede1;
-  padding: 6px 10px;
-  border-radius: 12px;
-  display: inline-block;
-  margin-bottom: 16px;
-}
-
-.name,
 .identity-text {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: bold;
   color: #3a2e25;
   margin-bottom: 10px;
 }
 
 .title {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #6e5c4b;
   margin-bottom: 12px;
 }
 
 .description {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: #6e5c4b;
   margin-bottom: 20px;
   line-height: 1.6;
@@ -99,19 +112,25 @@ body {
   white-space: pre-wrap;
 }
 
-/* 버튼 스타일 */
+/* 버튼 */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
 button {
-  margin-top: 16px;
   background-color: #d6b48c;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 999px;
   cursor: pointer;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
-/* 이미지 애니메이션 */
+/* 애니메이션 */
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
@@ -128,21 +147,26 @@ button {
     flex-direction: column;
   }
 
-  .name,
+  .type-large {
+    font-size: 2.8rem;
+    letter-spacing: 14px;
+  }
+
   .identity-text {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .title {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .description {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   .result-image {
     width: 120px;
+    border-radius: 10px;
   }
 
   .trait-list {
