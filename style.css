@@ -1,59 +1,14 @@
-.card {
-  background: #fff;
-  padding: 24px 20px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  max-width: 100%;
-  width: 100%;
-  margin: 20px auto;
-  text-align: center;
-  font-family: 'Pretendard', sans-serif;
-  position: relative;
+/* 기본 설정 */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+  background-color: #fff8f2;
 }
 
-.card img {
-  width: 100%;
-  max-width: 220px;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 12px;
-}
-
-.result-title {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #3a2e25;
-  margin-bottom: 10px;
-}
-
-.result-desc {
-  font-size: 1rem;
-  color: #6e5c4b;
-  margin-bottom: 16px;
-  line-height: 1.5;
-}
-
-@media (max-width: 480px) {
-  .card {
-    padding: 20px 16px;
-    margin: 12px auto;
-  }
-
-  .result-title {
-    font-size: 1.2rem;
-  }
-
-  .result-desc {
-    font-size: 0.95rem;
-  }
-
-  .card img {
-    max-width: 180px;
-  }
-}
-
+/* 결과 페이지 전체 */
 .result-page {
-  background: #fff8f2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,26 +16,29 @@
   padding: 20px;
 }
 
-.card {
-  background: #ffffff;
+/* 카드 스타일 */
+.result-card {
+  background-color: #ffffff;
+  padding: 24px 20px;
   border-radius: 20px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-  padding: 24px;
-  max-width: 360px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
   width: 100%;
   text-align: center;
-  font-family: 'Pretendard', sans-serif;
   position: relative;
 }
 
-.character-img img {
+/* 결과 이미지 */
+.result-image {
   width: 140px;
   height: auto;
-  margin-bottom: 16px;
+  display: block;
+  margin: 0 auto 16px;
   animation: float 3s ease-in-out infinite;
 }
 
-.result-type {
+/* 텍스트 요소들 */
+.type {
   font-size: 0.85rem;
   letter-spacing: 3px;
   font-weight: 600;
@@ -92,28 +50,30 @@
   margin-bottom: 16px;
 }
 
-.result-title {
-  font-size: 1.3rem;
+.name {
+  font-size: 1.4rem;
   font-weight: bold;
   color: #3a2e25;
   margin-bottom: 10px;
 }
 
-.result-desc {
+.title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #6e5c4b;
+  margin-bottom: 12px;
+}
+
+.description {
   font-size: 1rem;
   color: #6e5c4b;
   margin-bottom: 20px;
-  line-height: 1.5;
-}
-
-.text-box p {
-  font-size: 0.95rem;
-  color: #444;
   line-height: 1.6;
+  padding: 0 4px;
   white-space: pre-wrap;
-  margin-bottom: 24px;
 }
 
+/* 버튼 스타일 */
 button {
   margin-top: 16px;
   background-color: #d6b48c;
@@ -123,4 +83,34 @@ button {
   border-radius: 999px;
   cursor: pointer;
   font-size: 0.95rem;
+}
+
+/* 이미지 애니메이션 */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* 모바일 대응 */
+@media (max-width: 480px) {
+  .result-card {
+    padding: 20px 16px;
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+
+  .result-image {
+    width: 120px;
+  }
 }
