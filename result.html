@@ -7,29 +7,29 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-   <div class="result-card">
-  <div class="card-inner">
-    <div class="left">
-      <img id="character-image" class="result-image" alt="CTMI 캐릭터 이미지" />
-    </div>
-    <div class="right">
-      <ul class="trait-list" id="trait-list">
-        <!-- JS에서 Brew / Iced / Milky / Sweety 넣기 -->
-      </ul>
+  <div class="result-page">
+    <div class="result-card">
+      <div class="card-inner">
+        <div class="left">
+          <img id="character-image" class="result-image" alt="CTMI 캐릭터 이미지" />
+        </div>
+        <div class="right">
+          <ul class="trait-list" id="trait-list">
+            <!-- JS에서 Brew / Iced / Milky / Sweety 삽입 -->
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="identity-text" id="character-name"></h2>
+      <h3 class="title" id="character-title"></h3>
+      <p class="description" id="character-description"></p>
+
+      <div class="buttons">
+        <button onclick="location.href='index.html'">처음으로</button>
+      </div>
     </div>
   </div>
 
-  <h2 class="identity-text" id="character-name"></h2>
-  <h3 class="title" id="character-title"></h3>
-  <p class="description" id="character-description"></p>
-
-  <button onclick="location.href='index.html'">처음으로</button>
-</div>
-    </div>
-  </div>
-
-  
   <script type="module" src="result.js"></script>
 </body>
 </html>
