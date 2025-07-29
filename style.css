@@ -7,21 +7,22 @@ body {
   background-color: #fff8f2;
 }
 
-/* 결과 페이지 전체 */
+/* 전체 페이지 */
 .result-page {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  min-height: 100vh;      
-  width: 100%;            
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
   padding: 20px;
-  background: #fff8f2;
-  box-sizing: border-box; 
+  background-color: #fff8f2;
+  box-sizing: border-box;
 }
 
 /* 카드 스타일 */
 .result-card {
-  background-color: #fff8f2; /* 카드 배경을 body와 동일하게 */
+  background-color: #fff8f2;
   padding: 24px 20px;
   border-radius: 20px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
@@ -30,6 +31,8 @@ body {
   text-align: center;
   position: relative;
 }
+
+/* 타입 박스 */
 .type-box {
   max-width: 400px;
   width: 100%;
@@ -37,7 +40,7 @@ body {
   padding: 16px;
   background-color: #fff0e1;
   border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   text-align: center;
 }
 
@@ -48,7 +51,8 @@ body {
   font-weight: 700;
   margin: 0;
 }
-/* 카드 내부 이미지 + trait 나열 부분 */
+
+/* 이미지 + 특성 */
 .card-inner {
   display: flex;
   justify-content: center;
@@ -57,17 +61,15 @@ body {
   margin-bottom: 16px;
 }
 
-/* 이미지 영역 */
 .result-image {
   width: 140px;
   height: auto;
   display: block;
-  background-color: #fff8f2; /* 카드/배경과 통일 */
-  border-radius: 12px;       /* 이미지 모서리 부드럽게 */
+  background-color: #fff8f2;
+  border-radius: 12px;
   animation: float 3s ease-in-out infinite;
 }
 
-/* 속성 trait list */
 .trait-list {
   list-style: none;
   padding: 0;
@@ -81,20 +83,7 @@ body {
   margin-bottom: 6px;
 }
 
-/* 텍스트 요소들 */
-.type {
-  font-size: 0.85rem;
-  letter-spacing: 3px;
-  font-weight: 600;
-  color: #4b2e2e;
-  background-color: #f5ede1;
-  padding: 6px 10px;
-  border-radius: 12px;
-  display: inline-block;
-  margin-bottom: 16px;
-}
-
-.name,
+/* 텍스트 */
 .identity-text {
   font-size: 1.4rem;
   font-weight: bold;
@@ -118,9 +107,14 @@ body {
   white-space: pre-wrap;
 }
 
-/* 버튼 스타일 */
+/* 버튼 */
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
 button {
-  margin-top: 16px;
   background-color: #d6b48c;
   color: white;
   padding: 10px 20px;
@@ -130,14 +124,14 @@ button {
   font-size: 0.95rem;
 }
 
-/* 이미지 애니메이션 */
+/* 애니메이션 */
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
   100% { transform: translateY(0px); }
 }
 
-/* 모바일 대응 */
+/* 모바일 최적화 */
 @media (max-width: 480px) {
   .result-card {
     padding: 20px 16px;
@@ -146,11 +140,12 @@ button {
   .card-inner {
     flex-direction: column;
   }
- .type-large {
+
+  .type-large {
     font-size: 2.2rem;
     letter-spacing: 10px;
   }
-  .name,
+
   .identity-text {
     font-size: 1.2rem;
   }
@@ -170,5 +165,14 @@ button {
 
   .trait-list {
     text-align: center;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
   }
 }
