@@ -1,5 +1,6 @@
 /* 웹폰트: 손글씨 스타일 */
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Gowun+Dodum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;700&display=swap');
 
 /* 기본 설정 */
 body {
@@ -47,7 +48,7 @@ body {
 }
 
  .type-large {
-  font-family: 'Outfit', 'Noto Sans KR', sans-serif;
+  font-family: 'Josefin Slab', serif;
   font-size: 2.4rem;
   letter-spacing: 14px;
   font-weight: 700;
