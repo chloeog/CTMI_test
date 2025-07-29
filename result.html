@@ -7,14 +7,26 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
+  <div class="result-page">
     <div class="result-card">
-      <h2 id="character-type" class="type"></h2>
-      <h1 id="character-name" class="name"></h1>
-      <h3 id="character-title" class="title"></h3>
-      <p id="character-description" class="description"></p>
+      <div class="card-inner">
+        <h2 id="character-type" class="type"></h2>
+        <div class="left">
+          <img id="character-image" class="result-image" alt="CTMI 캐릭터 이미지" />
+        </div>
+        <div class="right">
+          <ul class="trait-list" id="trait-list">
+            <!-- JS에서 Brew / Iced / Milky / Sweety 삽입 -->
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="identity-text" id="character-name"></h2>
+      <h3 class="title" id="character-title"></h3>
+      <p class="description" id="character-description"></p>
+
       <div class="buttons">
-        <button onclick="window.location.href='index.html'">처음으로</button>
+        <button onclick="location.href='index.html'">처음으로</button>
       </div>
     </div>
   </div>
