@@ -14,7 +14,7 @@ const result = ctmiResults[type];
 document.getElementById('character-type').textContent = type.split('').join(' ');
 document.getElementById('character-name').textContent = result.name;
 document.getElementById('character-title').textContent = result.title;
-document.getElementById('character-description').textContent = result.description;
+document.getElementById('character-description').innerHTML = result.description;
 
 // 이미지 삽입
 const imageElement = document.getElementById('character-image');
