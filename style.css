@@ -107,13 +107,14 @@ body {
   white-space: pre-wrap;
 }
 
-/* 버튼 */
 .buttons {
-  margin-top: 20px;
   display: flex;
-  gap: 10px;
+  justify-content: center;  /* 가운데 정렬 */
+  gap: 12px;                 /* 버튼 간격 */
+  margin-top: 20px;
 }
 
+/* 버튼 자체는 기존 그대로 */
 button {
   background-color: #d6b48c;
   color: white;
