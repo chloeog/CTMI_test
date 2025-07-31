@@ -43,7 +43,7 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // 이미지 저장 함수 (전역)
+    // 이미지 저장 함수
     window.downloadCardImage = function () {
       const card = document.querySelector('.result-card');
       if (!card) return;
