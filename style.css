@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;700&display=swap');
 
 /* 기본 설정 */
+
+.only-desktop { display: none; }
+@media (min-width: 600px) { .only-desktop { display: inline; } }
 body {
   margin: 0;
   padding: 0;
