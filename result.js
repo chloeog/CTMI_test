@@ -11,6 +11,7 @@ if (!type || type.length !== 4 || !ctmiResults[type]) {
 const result = ctmiResults[type];
 
 // 기본 텍스트 삽입
+titleEl.innerHTML = result.title;
 document.getElementById('character-type').textContent = type.split('').join(' ');
 document.getElementById('character-name').textContent = result.name;
 document.getElementById('character-title').textContent = result.title;
