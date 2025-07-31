@@ -134,20 +134,33 @@ button {
   font-size: 1rem;
 }
 .starbucks-link-button {
-  display: inline-block;
-  margin-top: 16px;
-  padding: 12px 20px;
-  background-color: #1e3932; /* 스타벅스 그린 */
-  color: white;
-  font-size: 16px;
-  border-radius: 12px;
+  display: block;
+  width: 100%; /* 카드 가로폭과 일치 */
+  margin: 10px 0 0; /* 이미지 저장 버튼과 약 1cm 간격 */
+  padding: 14px;
+  background-color: #1e3932;
+  color: #fff;
+  text-align: center;
   text-decoration: none;
+  font-size: 16px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .starbucks-link-button:hover {
-  background-color: #154734; /* 더 진한 스타벅스 그린 */
+  animation: shake-horizontal 0.5s ease-in-out;
+  background-color: #154734;
+}
+
+/* 좌우 흔들리는 모션 */
+@keyframes shake-horizontal {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
 }
 /* 애니메이션 */
 @keyframes float {
