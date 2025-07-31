@@ -133,7 +133,22 @@ button {
   cursor: pointer;
   font-size: 1rem;
 }
+.starbucks-link-button {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 20px;
+  background-color: #1e3932; /* 스타벅스 그린 */
+  color: white;
+  font-size: 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
 
+.starbucks-link-button:hover {
+  background-color: #154734; /* 더 진한 스타벅스 그린 */
+}
 /* 애니메이션 */
 @keyframes float {
   0% { transform: translateY(0px); }
