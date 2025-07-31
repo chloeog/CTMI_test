@@ -8,14 +8,14 @@ export const ctmiResults = {
   },
   "EHMU": {
    name: "내유외강의 따뜻한 라떼",
-    title: "우유의 부드러움은 있지만, 달콤함은 생략!",
+    title: "우유의 부드러움은 있지만, <br>달콤함은 생략!",
     description: "말은 적지만 눈빛에서 진심이 느껴지는 사람. 겉보기엔 온화하지만, 본인만의 기준은 확고하죠. 달콤함보다는 묵직한 신뢰로 다가오는 타입이에요.",
     image: './images/EHMU.png',
     traits: ['Espresso', 'Hot', 'Milky', 'Unsweetened']
   },
   "EHNS": {
     name: "츤데레의 정석, 바닐라 소이라떼",
-    title: "진한 샷에 달콤한 시럽 한 방울—바로 당신이에요!",
+    title: "진한 샷에 달콤한 시럽 한 방울—<br>바로 당신이에요!",
     description: "표현은 서툴지만 은근히 다정한 스타일. 주변 사람들은 당신의 배려를 뒤늦게 알아차리고 감동하곤 해요. “츤데레” 그 자체.",
     image: './images/EHNS.png',
     traits: ['Espresso', 'Hot', 'Non-Milk', 'Sweety']
@@ -29,8 +29,8 @@ export const ctmiResults = {
   },
   "EIMS": {
     name: "털털한데 달달하기까지, 마끼야또맨",
-    title: "차가운 얼음 위에 부드러운 우유와 달콤함까지! 쿨한 외모와는 달리 정 많은 반전 매력의 소유자예요. 같이 있으면 기분이 좋아지는 사람, 당신이에요.",
-    description: "센스와 개성이 넘치는 분위기 메이커!",
+    title: "센스와 개성이 넘치는 분위기 메이커! ",
+    description: "차가운 얼음 위에 부드러운 우유와 달콤함까지! 쿨한 외모와는 달리 정 많은 반전 매력의 소유자예요. 같이 있으면 기분이 좋아지는 사람, 당신이에요.",
     image: './images/EIMS.png',
     traits: ['Espresso', 'Iced', 'Milky', 'Sweety']
   },
@@ -57,7 +57,7 @@ export const ctmiResults = {
   },
   "BHMS": {
     name: "친절한 아메리칸, 오늘의 커피 with 크림",
-    title: "핸드드립과 따뜻한 우유, 달콤함까지—당신은 정성과 감성의 결정체!",
+    title: "핸드드립과 따뜻한 우유, 달콤함까지—<br>당신은 정성과 감성의 결정체!",
     description: "다정한 말 한마디로 사람의 하루를 바꾸는 능력자! 섬세하고 따뜻해서 누구든 곁에 두고 싶어하죠. 당신이 있는 공간엔 자연스럽게 온기가 퍼져요.",
     image: './images/BHMS.png',
     traits: ['Brew', 'Hot', 'Milky', 'Sweety']
@@ -71,8 +71,8 @@ export const ctmiResults = {
   },
   "BHNS": {
     name: "풍미를 아는 근본파, 오늘의 커피 with 시럽",
-    title: "따뜻하지만 밀크는 사양! 단 건 필요하지만 뿌리진 않죠. 필요할 땐 스윗하게, 거리감도 적절하게—균형감이 좋아요. 티 내지 않아도 어느새 마음에 스며드는 사람이에요.",
-    description: "예의와 분위기를 모두 챙기는 매너의 정석.",
+    title: "따뜻하지만 밀크는 사양! <br>당단 건 필요하지만 뿌리진 않죠. ",
+    description: "예의와 분위기를 모두 챙기는 매너의 정석. 필요할 땐 스윗하게, 거리감도 적절하게—균형감이 좋아요. 티 내지 않아도 어느새 마음에 스며드는 사람이에요.",
     image: './images/BHNS.png',
     traits: ['Brew', 'Hot', 'Non-Milk', 'Sweety']
   },
@@ -85,8 +85,8 @@ export const ctmiResults = {
   },
   "BIMS": {
     name: "통통튀는 당신은 돌체콜드브루",
-    title: "시원하고 달콤한 우유 커피—언제나 인기 많은 당신! 누구와도 자연스럽게 어울리며, 가볍지만 깊이도 있는 스타일. 센스 있는 말 한마디로 분위기를 환기시키는 능력자예요.",
-    description: "재치 있고 에너지 넘치는 분위기 메이커!",
+    title: "시원하고 달콤한 우유 커피—<br>언제나 인기 많은 당신! ",
+    description: "재치 있고 에너지 넘치는 분위기 메이커! 누구와도 자연스럽게 어울리며, 가볍지만 깊이도 있는 스타일. 센스 있는 말 한마디로 분위기를 환기시키는 능력자예요.",
     image: './images/BIMS.png',
     traits: ['Brew', 'Iced', 'Milky', 'Sweety']
   },
