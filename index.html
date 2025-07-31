@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CTMI 성격유형 테스트</title>
   <link rel="preload" as="image" href="images/doru.png" />
-  <style>
+ <style>
     :root {
       --bg-start: #f7f0e8;
       --bg-end: #e2d6c1;
-      --card-bg: #fff;
-      --brand-dark: #4b2e2e;
-      --brand-medium: #6b4e3e;
-      --brand-light: #9c7c5a;
-      --button: #d6b48c;
-      --button-hover: #cfa06f;
+      --card-bg: #DABB98; /* doru 이미지 배경 톤 */
+      --brand-dark: #3f2f24;
+      --brand-medium: #5a4534;
+      --brand-light: #7a6252;
+      --button: #8c6f4f;
+      --button-hover: #7a5e3e;
       --radius: 24px;
-      --shadow: 0 10px 30px rgba(0,0,0,0.1);
+      --shadow: 0 14px 40px rgba(0,0,0,0.08);
       font-family: 'Pretendard', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
@@ -43,6 +43,7 @@
       max-width: 900px;
       width: 100%;
       align-items: center;
+      text-align: center; /* 전체 중앙 정렬 */
     }
 
     @media (max-width: 880px) {
@@ -60,6 +61,7 @@
       display: flex;
       flex-direction: column;
       gap: 12px;
+      align-items: center; /* 가운데 정렬 보강 */
     }
 
     .hero-text h1 {
@@ -82,6 +84,7 @@
       flex-wrap: wrap;
       gap: 12px;
       margin-top: 8px;
+      justify-content: center;
     }
 
     .hero-text button {
@@ -95,12 +98,13 @@
       cursor: pointer;
       transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
       box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+      min-width: 180px;
     }
 
     .hero-text button:hover {
       background-color: var(--button-hover);
       transform: translateY(-2px);
-      box-shadow: 0 16px 44px rgba(0,0,0,0.12);
+      box-shadow: 0 16px 44px rgba(0,0,0,0.14);
     }
 
     .subtext {
@@ -123,7 +127,8 @@
       border-radius: 16px;
       box-shadow: 0 25px 60px rgba(0,0,0,0.08);
       animation: gentle-bob 6s ease-in-out infinite;
-      transition: transform .3s ease;
+      transition: transform .3s ease, filter .3s ease;
+      filter: drop-shadow(0 20px 40px rgba(63,47,36,0.25));
     }
 
     .hero-character img:hover {
@@ -139,7 +144,7 @@
       margin-top: 6px;
       font-size: .9rem;
       font-weight: 500;
-      color: #7a6252;
+      color: #5a4534;
     }
 
   </style>
