@@ -1,72 +1,179 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CTMI 성격유형 테스트</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="preload" as="image" href="doru.png" />
   <style>
+    :root {
+      --bg-start: #f7f0e8;
+      --bg-end: #e2d6c1;
+      --card-bg: #fff;
+      --brand-dark: #4b2e2e;
+      --brand-medium: #6b4e3e;
+      --brand-light: #9c7c5a;
+      --button: #d6b48c;
+      --button-hover: #cfa06f;
+      --radius: 24px;
+      --shadow: 0 10px 30px rgba(0,0,0,0.1);
+      font-family: 'Pretendard', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
-      background: linear-gradient(145deg, #f7f0e8, #e2d6c1);
-      font-family: 'Pretendard', sans-serif;
       margin: 0;
-      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(145deg, var(--bg-start), var(--bg-end));
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      padding: 16px;
     }
-    .container {
-      background: white;
-      padding: 40px;
-      border-radius: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      text-align: center;
-      max-width: 400px;
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 40px 32px;
+      box-shadow: var(--shadow);
+      max-width: 900px;
+      width: 100%;
+      align-items: center;
     }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 16px;
-      color: #4b2e2e;
+
+    @media (max-width: 880px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 32px 24px;
+      }
+      .hero-character {
+        order: -1;
+        margin-bottom: 16px;
+      }
     }
-    p {
-      font-size: 16px;
-      color: #6b4e3e;
-      margin-bottom: 30px;
+
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
-    button {
-      background-color: #d6b48c;
+
+    .hero-text h1 {
+      margin: 0;
+      font-size: clamp(1.8rem, 2.2vw, 2.6rem);
+      line-height: 1.1;
+      color: var(--brand-dark);
+      font-weight: 700;
+    }
+
+    .hero-text p {
+      margin: 0;
+      font-size: 1rem;
+      color: var(--brand-medium);
+      line-height: 1.4;
+    }
+
+    .hero-text .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .hero-text button {
+      background-color: var(--button);
       border: none;
       color: white;
-      font-size: 16px;
-      padding: 12px 24px;
+      padding: 14px 24px;
       border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 600;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
     }
-    button:hover {
-      background-color: #cfa06f;
+
+    .hero-text button:hover {
+      background-color: var(--button-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 16px 44px rgba(0,0,0,0.12);
     }
+
     .subtext {
-      margin-top: 10px;
-      font-size: 14px;
-      color: #9c7c5a;
+      font-size: .85rem;
+      color: var(--brand-light);
     }
+
+    .hero-character {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .hero-character img {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      display: block;
+      border-radius: 16px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+      animation: gentle-bob 6s ease-in-out infinite;
+      transition: transform .3s ease;
+    }
+
+    .hero-character img:hover {
+      transform: translateY(-4px) rotate(-1deg);
+    }
+
+    @keyframes gentle-bob {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    .tagline {
+      margin-top: 6px;
+      font-size: .9rem;
+      font-weight: 500;
+      color: #7a6252;
+    }
+
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>나만의 커피 친구는?</h1>
-    <p>커피로 알아보는 귀여운 심리테스트 💡<br>
-    네 가지 질문을 통해 당신과 어울리는 커피 캐릭터를 만나보세요!</p>
-    <button onclick="startTest()">테스트 시작하기</button>
-    <div class="subtext">소요 시간 약 1분 ⏱</div>
+  <div class="hero">
+    <div class="hero-text">
+      <h1>나의 커피취향을 닮은 친구는?</h1>
+      <p>커피로 알아보는 귀여운 심리테스트 💡<br>네 가지 질문을 통해 당신과 어울리는 커피 캐릭터를 만나보세요!</p>
+      <div class="buttons">
+        <button onclick="startTest()">내 커피 보기</button>
+      </div>
+      <div class="tagline">소요 시간 약 1분 ⏱</div>
+    </div>
+    <div class="hero-character">
+      <img src="doru.png" alt="크리미한 휘핑크림이 얹어진 고양이 커피 친구, 따뜻한 미소로 머그잔을 든 캐릭터">
+    </div>
   </div>
 
   <script>
     function startTest() {
-      window.location.href = 'question.html?q=0';
+      location.href = 'question.html?q=0';
     }
+
+    // optional: 이미지 로딩 후 페이드인
+    document.addEventListener('DOMContentLoaded', () => {
+      const img = document.querySelector('.hero-character img');
+      if (img) {
+        img.style.opacity = 0;
+        img.style.transition = 'opacity .6s ease-out';
+        img.onload = () => { img.style.opacity = 1; };
+        if (img.complete) img.style.opacity = 1;
+      }
+    });
   </script>
 </body>
 </html>

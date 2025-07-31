@@ -6,7 +6,9 @@
   <title>CTMI 결과</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script type="module" src="result.js?v=9"></script>
 </head>
 <body>
   <div class="result-page">
@@ -35,10 +37,15 @@
 
     <!-- 버튼은 캡처 대상 외부에 배치 -->
     <div class="buttons" id="button-area">
-      <button onclick="location.href='index.html'">처음으로</button>
-      <button id="download-btn">이미지로 저장</button>
-    </div>
-  </div>
+  <button onclick="location.href='index.html'">처음으로</button>
+  <button id="download-btn">이미지로 저장</button>
+
+  <a href="https://www.starbucks.co.kr/menu/drink_list.do"
+     target="_blank"
+     class="starbucks-link-button">
+    ☕ 당신에게 어울리는 스타벅스 커피는?
+  </a>
+</div>
 
   <script type="module" src="result.js"></script>
 
