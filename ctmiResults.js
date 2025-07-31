@@ -98,7 +98,7 @@ export const ctmiResults = {
     traits: ['Brew', 'Iced', 'Milky', 'Unsweetened']
   },
   "BINS": {
-    name: "안보고 있지만 다 알고 있는 당신, 콜드브루 with 시럽",
+    name: "안보고 있는척, 하지만 다 알고 있는, 콜드브루 with 시럽",
     title: "아이스 브루에 시럽 한 방울!",
     description: "겉으론 무심하지만, 속은 누구보다 따뜻한 스타일. 말을 아끼지만 필요한 순간엔 정확하게 짚어요. 한번 스친 인연도 오래 기억에 남는 묘한 매력이 있어요.",
     image: './images/BINS.png',
