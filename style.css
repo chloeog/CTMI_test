@@ -119,50 +119,47 @@ body {
   white-space: pre-wrap;
 }
 
-/* 버튼 */
+/* 버튼 묶음: 카드와 같은 폭, 세로로 정렬, 간격은 gap로만 */
 .buttons {
+  width: min(92vw, 560px);   /* 카드와 동일 폭 */
+  margin-top: 12px;          /* 카드와 버튼 사이 간격 */
   display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 20px;
+  flex-direction: column;
+  gap: 12px;                 /* 버튼들 간 간격 */
 }
 
-button {
-  background-color: #d6b48c;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 999px;
-  cursor: pointer;
-  font-size: 1rem;
+.buttons > * {
+  width: 100%;
+  margin: 0;                 /* 개별 margin 제거, gap으로만 간격 관리 */
+  box-sizing: border-box;
 }
+
+/* 스타벅스 링크 버튼 스타일 */
 .starbucks-link-button {
   display: block;
-  width: 100%; /* 카드 가로폭과 일치 */
-  margin: 10px 0 0; /* 이미지 저장 버튼과 약 1cm 간격 */
-  padding: 14px;
+  padding: 14px 16px;
   background-color: #1e3932;
   color: #fff;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   border-radius: 12px;
-  transition: transform 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transform: translateX(0);
 }
 
 .starbucks-link-button:hover {
-  animation: shake-horizontal 0.5s ease-in-out;
   background-color: #154734;
+  animation: shake-horizontal 0.5s ease-in-out;
 }
 
-/* 좌우 흔들리는 모션 */
+/* 좌우 흔들림 모션 */
 @keyframes shake-horizontal {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-4px); }
-  50% { transform: translateX(4px); }
-  75% { transform: translateX(-4px); }
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-4px); }
+  50%  { transform: translateX(4px); }
+  75%  { transform: translateX(-4px); }
   100% { transform: translateX(0); }
 }
 /* 애니메이션 */
