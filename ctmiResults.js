@@ -7,8 +7,8 @@ export const ctmiResults = {
     traits: ['Espresso', 'Hot', 'Milky', 'Sweety']
   },
   "EHMU": {
-   name: "내유외강의 따뜻한 라떼",
-    title: "우유의 부드러움은 있지만, <br>달콤함은 생략!",
+    name: "내유외강의 따뜻한 라떼",
+    title: "우유의 부드러움은 있지만,<br>달콤함은 생략!",
     description: "말은 적지만 눈빛에서 진심이 느껴지는 사람. 겉보기엔 온화하지만, 본인만의 기준은 확고하죠. 달콤함보다는 묵직한 신뢰로 다가오는 타입이에요.",
     image: './images/EHMU.png',
     traits: ['Espresso', 'Hot', 'Milky', 'Unsweetened']
@@ -23,33 +23,33 @@ export const ctmiResults = {
   "EHNU": {
     name: "에스프레소",
     title: "진짜 커피를 아는 당신.",
-    description: "단맛 없이도 깊은 맛을 내는 사람, 바로 당신. 불필요한 군더더기를 싫어하고, 말보다 행동이 앞서는 스타일이죠.차가워 보이지만, 속은 누구보다 열정적일지도 몰라요.",
+    description: "단맛 없이도 깊은 맛을 내는 사람, 바로 당신. 불필요한 군더더기를 싫어하고, 말보다 행동이 앞서는 스타일이죠. 차가워 보이지만, 속은 누구보다 열정적일지도 몰라요.",
     image: './images/EHNU.png',
     traits: ['Espresso', 'Hot', 'Non-Milk', 'Unsweetened']
   },
   "EIMS": {
     name: "털털한데 달달하기까지, 마끼야또맨",
-    title: "센스와 개성이 넘치는 분위기 메이커! ",
+    title: "센스와 개성이 넘치는 분위기 메이커!",
     description: "차가운 얼음 위에 부드러운 우유와 달콤함까지! 쿨한 외모와는 달리 정 많은 반전 매력의 소유자예요. 같이 있으면 기분이 좋아지는 사람, 당신이에요.",
     image: './images/EIMS.png',
     traits: ['Espresso', 'Iced', 'Milky', 'Sweety']
   },
   "EIMU": {
-    name: "알잘딱깔센,기본을 지키는 아이스라떼",
+    name: "알잘딱깔센, 기본을 지키는 아이스라떼",
     title: "아이스지만 우유로 균형을 잡는 타입!",
     description: "뭐든 척척 잘해내는 알잘딱깔센 마스터. 감정 기복 없이 유연하고 이성적인 사고가 강점이에요. 복잡한 상황에서도 중심을 잃지 않는 스타일이죠.",
     image: './images/EIMU.png',
     traits: ['Espresso', 'Iced', 'Milky', 'Unsweetened']
   },
   "EINS": {
-     name: "99%의 시원시원함 뒤에 1%스윗함, 헤이즐넛 아메리카노",
+    name: "99%의 시원시원함 뒤에 1% 스윗함, 헤이즐넛 아메리카노",
     title: "강렬한 샷, 시원한 아이스를 좋아하는 당신!",
     description: "겉은 시크하지만, 가끔 내비치는 다정함이 치명적! 빠르고 정확한 판단력으로 모두를 이끄는 리더 타입. 당신의 달콤함은, 숨겨뒀을 때 더 매력적이죠.",
     image: './images/EINS.png',
     traits: ['Espresso', 'Iced', 'Non-Milk', 'Sweety']
   },
   "EINU": {
-    name: "한국인 그 자 체, 아아맨",
+    name: "한국인 그 자체, 아아맨",
     title: "쓴맛도 그대로 즐길 줄 아는 고수!",
     description: "사소한 감정에 휘둘리지 않는 냉철한 현실주의자. 독립적이고 신중한 모습이 주변에 신뢰를 줘요. 마음을 열면 오래도록 따뜻한 관계를 유지하는 편이죠.",
     image: './images/EINU.png',
@@ -71,7 +71,7 @@ export const ctmiResults = {
   },
   "BHNS": {
     name: "풍미를 아는 근본파, 오늘의 커피 with 시럽",
-    title: "따뜻하지만 밀크는 사양! <br>당단 건 필요하지만 뿌리진 않죠. ",
+    title: "따뜻하지만 밀크는 사양!<br>단 건 필요하지만 뿌리진 않죠.",
     description: "예의와 분위기를 모두 챙기는 매너의 정석. 필요할 땐 스윗하게, 거리감도 적절하게—균형감이 좋아요. 티 내지 않아도 어느새 마음에 스며드는 사람이에요.",
     image: './images/BHNS.png',
     traits: ['Brew', 'Hot', 'Non-Milk', 'Sweety']
@@ -79,13 +79,13 @@ export const ctmiResults = {
   "BHNU": {
     name: "겉은테토, 속은 에겐, 오늘의 커피",
     title: "진심을 담은 한 잔의 드립처럼,",
-    description: "말보단 행동, 속도보단 깊이를 추구하는 당신. 삶을 단순하게 보는 대신, 진심으로 살아가죠. 삶을 단순하게 보는 대신, 진심으로 살아가죠.",
+    description: "말보단 행동, 속도보단 깊이를 추구하는 당신. 진심으로 살아가죠.",
     image: './images/BHNU.png',
     traits: ['Brew', 'Hot', 'Non-Milk', 'Unsweetened']
   },
   "BIMS": {
     name: "통통튀는 당신은 돌체콜드브루",
-    title: "시원하고 달콤한 우유 커피—<br>언제나 인기 많은 당신! ",
+    title: "시원하고 달콤한 우유 커피—<br>언제나 인기 많은 당신!",
     description: "재치 있고 에너지 넘치는 분위기 메이커! 누구와도 자연스럽게 어울리며, 가볍지만 깊이도 있는 스타일. 센스 있는 말 한마디로 분위기를 환기시키는 능력자예요.",
     image: './images/BIMS.png',
     traits: ['Brew', 'Iced', 'Milky', 'Sweety']
